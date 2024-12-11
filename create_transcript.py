@@ -13,6 +13,8 @@ output_template = "./downloaded_audio/%(title)s.%(ext)s"
 DLP_COMMAND = F'yt-dlp "{VIDEO_URL}" --extract-audio --audio-format mp3 --output "{output_template}"'
 TRANSCRIPT_SUBFOLDER = "misc"
 
+# Script that downloads youtube audio, uses llm whisper to translate it and store it. In order to be uploaded to NotebookLM
+
 
 def save_transcript(video_url, transcript_subfolder):
     print("Video URL:", video_url)
